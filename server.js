@@ -24,7 +24,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // API's
-
+app.post("/get", async (req, res) => {
+  res.send("hello server is runnign smoothy make request")
+})
 app.post("/register", async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });
