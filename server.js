@@ -60,6 +60,6 @@ app.get("/logout", (req, res) => {
   res.redirect("logged Out");
 });
 
-app.listen(3000, () => {
-  console.log("Server is listening on port 3000");
+app.listen(process.env.PORT || 8001, () => {
+  console.log("Server is listening on port 8001");
 });
